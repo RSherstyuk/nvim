@@ -1,4 +1,3 @@
--- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -16,8 +15,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Установка leader перед lazy (опционально)
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup({
@@ -28,6 +25,29 @@ require("lazy").setup({
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
 })
+
+vim.opt.mouse = "a"
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
+vim.opt.number = true
+vim.opt.cursorline = false
+vim.opt.swapfile = false
+vim.opt.scrolloff = 7
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.fileformat = "unix"
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.termguicolors = true
+vim.opt.relativenumber = true
+vim.opt.clipboard = "unnamedplus"
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
 
 vim.g.clipboard = {
 	name = "win32yank",
